@@ -2,10 +2,10 @@
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { User } from '../models/user';
 
 //import { environment } from '@environments/environment';
-import { User } from '@app/models';
+// import { User } from ';
 
 @Injectable({ providedIn: 'root' })
 export class AccountService {

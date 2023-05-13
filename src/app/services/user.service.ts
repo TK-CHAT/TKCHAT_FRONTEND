@@ -1,6 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { User } from '../models/user';
+import { ResponseI } from '../models/response.interface';
+import { LoginI } from '../models/login.interface';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -22,5 +25,11 @@ export class UserService {
 
   postUsers(user: User){
     return this.http.post("https://cors-anywhere.herokuapp.com/"+this.url + "/api/account/register/", user)
+  }
+
+  loginByEmail(form:LoginI):Observable<ResponseI>{
+    let direccion = this.url + "/api/account/login/";
+
+    return this.http.post<ResponseI>(direccion,form);
   }
 }

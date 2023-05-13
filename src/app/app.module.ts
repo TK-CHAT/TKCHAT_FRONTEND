@@ -6,8 +6,6 @@ import { AppComponent } from './app.component';
 import { CheckInModule } from './TkChat/check-in/check-in.module';
 import { HttpClientModule } from '@angular/common/http';
 
-import {HttpClientModule} from '@angular/common/http';
-
 
 @NgModule({
   declarations: [
