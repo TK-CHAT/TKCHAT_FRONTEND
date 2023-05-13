@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SingUpComponent } from './sing-up.component';
+import { SignupComponent } from './sing-up.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: SingUpComponent,
+    component: SignupComponent,
   }
 ];
 

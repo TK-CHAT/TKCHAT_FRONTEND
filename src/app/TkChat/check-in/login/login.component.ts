@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { UserService } from '../../Service/user.service';
-import { LoginI } from '../modelos/login.interface';
-import { ResponseI } from '../modelos/response.interface';
+import { LoginI } from '../../../models/login.interface';
 
 import { Router } from '@angular/router';
+import { UserService } from 'src/app/services/user.service';
+import { ResponseI } from 'src/app/models/response.interface';
 
 @Component({
   templateUrl: './login.component.html',
@@ -22,17 +22,8 @@ export class LoginComponent implements OnInit{
     })
   }
 
-
-
-
   ngOnInit(): void {
 
-
-
-    // const usuario={ email:"giancarlo@hotmail.com", password:"12347890"} as LoginI;
-    // this.user.loginByEmail(usuario).subscribe(data =>{
-    //   console.log(data);
-    // })
   }
 
   onLogin(){
