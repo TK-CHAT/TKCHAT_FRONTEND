@@ -1,17 +1,29 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SingUpComponent } from './sing-up.component';
+import { SignupComponent } from './sing-up.component';
 import { CheckInRoutingModule } from './sing-up-routing.module';
-
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
   declarations: [
-    SingUpComponent
+    SignupComponent
   ],
   imports: [
+    HttpClientModule,
     CommonModule,
     CheckInRoutingModule
   ]
 })
-export class SingUpModule { }
+/*
+@NgModule({
+  imports: [
+    HttpClientModule,
+    // Otros módulos importados
+  ],
+  // Otras configuraciones del módulo
+})
+*/
+
+export class SingUpModule {
+}
