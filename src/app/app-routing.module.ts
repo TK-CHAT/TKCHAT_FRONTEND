@@ -2,14 +2,11 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  {
-    path: '',
-    children:[
+  { path: '', children: [
       {
         path: 'checkIn',
-        loadChildren:() => import('./TkChat/check-in/check-in.module').then((m)=>m.CheckInModule)
+        loadChildren: () => import('./TkChat/check-in/check-in.module').then((m) => m.CheckInModule)
       },
-      
     ],
   },
 ];
@@ -18,4 +15,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

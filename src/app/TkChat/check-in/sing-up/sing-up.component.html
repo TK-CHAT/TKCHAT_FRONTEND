@@ -1,1 +1,34 @@
-<p>sing-up works!</p>
+<div class="container">
+   <div class="singup-form">
+      <h4>Registro</h4>
+
+      <form>
+         <div class="mb-3" >
+            <label class="form-label">Nombres</label>
+            <input [(ngModel)]="user.nombres" type="text" class="form-control" name="nombres">
+         </div>
+         <div class="mb-3">
+            <label class="form-label">Apellidos</label>
+            <input [(ngModel)]="user.apellidos" type="text" class="form-control" name="apellidos">
+         </div>
+         <div class="mb-3">
+            <label class="form-label">Correo</label>
+            <input [(ngModel)]="user.correo" type="text" class="form-control" name="correo">
+         </div>
+         <div class="mb-3">
+            <label for="form-label">Contraseña</label>
+            <input [(ngModel)]="user.password" type="text" class="form-control" name="password">
+         </div>
+         <div class="mb-3">
+            <label for="form-label">Repita Contraseña</label>
+            <input [(ngModel)]="user.samepass" type="text" class="form-control" name="samepass">
+         </div>
+
+         <div style="text-align: center;">
+            <button (click)="registrar" class="btn btn-primary">Registrar</button>
+            <button type="../login" class="btn btn-primary">Cancelar</button>
+         </div>
+      </form>
+      
+   </div>
+</div>
