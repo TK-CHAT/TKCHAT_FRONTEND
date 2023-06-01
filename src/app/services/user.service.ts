@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { User } from '../models/user.interface';
+import { User } from '../common/interfaces/user.interface';
+import { regUser } from '../common/interfaces/reg_user.interface';
+import { IResponse } from '../common/interfaces/response.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -14,11 +16,22 @@ export class UserService {
 
   //get users
   getUsers() {
-    return this.http.get(this.url + "/api/account/user/");
+    return this.http.get(this.url + "api/account/user/");
   }
 
-  //agregar users
-  addUser(user: User) {
-    return this.http.post("https://cors-anywhere.herokuapp.com/" + this.url + "/api/account/register/", user);
+  //agregar users:
+  addUsersss(user: User) {
+    return this.http.post(this.url + "api/account/register/", user);
   }
+  //2da opcion(add):
+  public async addUser(user: regUser): Promise<IResponse> {
+    return new Promise<IResponse>((resolve) => {
+      this.http.post<any>(this.url + "api/account/register/", user)
+        .pipe()
+        .subscribe((res) => {
+          resolve(res);
+        })
+    })
+  }
+
 }

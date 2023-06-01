@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { SignupComponent } from './sing-up.component';
 import { CheckInRoutingModule } from './sing-up-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     HttpClientModule,
     CommonModule,
-    CheckInRoutingModule
+    CheckInRoutingModule,
+    ReactiveFormsModule
   ]
 })
 

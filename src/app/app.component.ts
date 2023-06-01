@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { UserService } from './services/user.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -9,9 +10,8 @@ import { UserService } from './services/user.service';
 export class AppComponent {
   title = 'TkChat';
 
-  constructor(
-private userService: UserService
-  ){
-        
+  constructor (private userService: UserService) {
+
   }
+
 }
